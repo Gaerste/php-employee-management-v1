@@ -25,11 +25,14 @@ function updateEmployee(array $updateEmployee)
 }
 
 
-function getEmployee(string $id)
+function getEmployee()
 {
+    $jsonurl = "../../resources/employees.json";
+    $storedEmployees = json_decode(file_get_contents($jsonurl, true));
+    print_r($storedEmployees);
 // TODO implement it
 }
-
+getEmployee();
 
 function removeAvatar($id)
 {

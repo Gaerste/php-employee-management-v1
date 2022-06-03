@@ -1,8 +1,11 @@
+window.onload = () => getEmployees();
+
+const employeeController = "../src/library/employeeController.php";
+
+
+
 async function getEmployees() {
-    try {
-        const response = await fetch('../resources/employees,json');
-        console.log(response);
-    } catch (error) {
-        
-    }
-}
+        const response = await fetch(employeeController);
+        return response;
+    } 
+    getEmployees();
