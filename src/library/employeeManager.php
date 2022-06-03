@@ -1,4 +1,5 @@
 <?php
+
 /**
  * EMPLOYEE FUNCTIONS LIBRARY
  *
@@ -8,7 +9,8 @@
 
 function addEmployee(array $newEmployee)
 {
-// TODO implement it
+    // TODO implement it
+    require_once ""
 }
 
 
@@ -21,31 +23,32 @@ function deleteEmployee(string $id)
 
 function updateEmployee(array $updateEmployee)
 {
-// TODO implement it
+    // TODO implement it
 }
 
 
 function getEmployee()
 {
-    $jsonurl = "../../resources/employees.json";
-    $storedEmployees = json_decode(file_get_contents($jsonurl, true));
-    print_r($storedEmployees);
-// TODO implement it
+    $url = "../../resources/employees.json";
+    $employeesData = json_encode(file_get_contents($url), true);
+    return $employeesData;
 }
 getEmployee();
 
+
+
 function removeAvatar($id)
 {
-// TODO implement it
+    // TODO implement it
 }
 
 
 function getQueryStringParameters(): array
 {
-// TODO implement it
+    // TODO implement it
 }
 
 function getNextIdentifier(array $employeesCollection): int
 {
-// TODO implement it
+    // TODO implement it
 }

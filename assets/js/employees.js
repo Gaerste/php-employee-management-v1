@@ -1,11 +1,28 @@
-window.onload = () => getEmployees();
+const url = "../src/library/employeeController.php?action=getDataEmployees";
+const tableBody = document.getElementById("employeeTable");
 
-const employeeController = "../src/library/employeeController.php";
+// window.onload = getAllEmployees();
+
+async function getAllEmployees() {
+  const dataEmployee = await fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      const dataObject = JSON.parse(data);
+      renderDashboard(dataObject);
+    });
+}
 
 
+function renderDashboard(data) {
+    console.log(data);
+    
+}
+  //look for search id
+  
+  //add employee
+const createNewEmployee = document.getElementById("createNewEmployee");
+createNewEmployee.addEventListener("click", redirect);
+function redirect() {
 
-async function getEmployees() {
-        const response = await fetch(employeeController);
-        return response;
-    } 
-    getEmployees();
+  window.location.href = "employee.php";
+};

@@ -1,4 +1,7 @@
 <!-- TODO Employee view -->
+<?php
+    $id = ;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/main.css">
-    <title>Document</title>
+    <script src="../assets/js/employees.js" defer></script>
+    <title>Employee Page</title>
 </head>
 <body>
     <h1 class="title">Employee Page</h1>
-    <form action="" method="post" class="form">
+    <form action="library/employeeController.php" method="post" class="form">
+    <input type="hidden" name="userid" value="<?=$id?>">
         <div class="row">
         <label for="name">Name</label>
         <input type="text" class="form-control-file" name="name" id="name">
@@ -53,7 +58,7 @@
         </div>
         <div class="buttons">
         <button type="submit" class="btn btn-primary">Submit</button>
-        <button class="btn btn-secondary">Return</button>
+        <input type="button" class="btn btn-secondary" id="returnToDashboard" onclick="window.location='dashboard.php'" value="Return"></input>
         </div>
     </form>
 </body>
