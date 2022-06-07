@@ -43,25 +43,14 @@ session_start();
                 <th scope="col">State</th>
                 <th scope="col">Postal code</th>
                 <th scope="col">Phone Number</th>
-                <th><button type="submit" value="submit" class="btn" id="createNewEmployee"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <th><button onclick="window.location='employee.php';" type="submit" value="submit" class="btn" id="createNewEmployee"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <line x1="12" y1="5" x2="12" y2="19" />
                             <line x1="5" y1="12" x2="19" y2="12" />
                         </svg></button></th>
-            </tr>
+                        </tr>
         </thead>
-        <tbody>
-            <tr id="employeeTable">
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>admin@admi.com</td>
-                <td>22</td>
-                <td>Doral 120</td>
-                <td>Miami</td>
-                <td>Florida</td>
-                <td>33125</td>
-                <td>212 1238765</td>
-            </tr>
+        <tbody id="employeeTable">
         </tbody>
     </table>
 

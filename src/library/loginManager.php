@@ -12,8 +12,8 @@
          echo "$userinput";
          echo "$passinput";
     //class methods
-
-      $stored_users = json_decode(file_get_contents($storage), true);
+    require_once "../employee.php";
+        $stored_users = json_decode(file_get_contents($storage), true);
 
         // print_r($stored_users);
 
