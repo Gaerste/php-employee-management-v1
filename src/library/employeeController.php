@@ -1,7 +1,16 @@
 
 <?php
 require_once "employeeManager.php";
+if(isset($_POST["addEmployee"])){
+    // addEmployee();
+    header("location:../employee.php");
+}
+if(isset($_POST["submit"])){
+    addEmployee();
+    header("location:../dashboard.php");
 
+
+}
 if (isset($_GET['action'])&& $_GET['action']=== "getDataEmployees") {
     $employee = getEmployee();
     echo $employee;

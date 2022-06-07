@@ -11,7 +11,7 @@
 </head>
 <body>
     <h1 class="title">Employee Page</h1>
-    <form action="library/employeeManager.php" method="post" class="form">
+    <form action="library/employeeController.php" method="post" class="form">
     <input type="hidden" name="userid" value="<?=$id?>">
         <div class="row">
         <label for="name">Name</label>
@@ -55,7 +55,7 @@
         <input type="text" class="form-control-file" name="phoneNumber" id="phoneNumber">
         </div>
         <div class="buttons">
-        <button type="submit" class="btn btn-primary" >Submit</button>
+        <button type="submit" name="submit" class="btn btn-primary" >Submit</button>
         <input type="button" class="btn btn-secondary" id="returnToDashboard" onclick="window.location='dashboard.php'" value="Return"></input>
         </div>
     </form>
