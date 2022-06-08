@@ -28,7 +28,7 @@ session_start();
                 <path d="M6.66 15.66l-3.32 -3.32a1.25 1.25 0 0 1 .42 -2.044l3.24 -1.296l6 -6l3 3l-6 6l-1.296 3.24a1.25 1.25 0 0 1 -2.044 .42z" />
             </svg>
             <h1>Employee <span class="fs-3">management</span></h1>
-            <button type="submit" class="btn btn-outline-primary">Logout</button>
+            <a type="submit" class="btn btn-outline-primary" href="library/loginManager.php?logout=true">Logout</a>
         </div>
     </nav>
     <table class="table">

@@ -35,28 +35,28 @@
         </div>
         <div class="row">
         <label for="city">City</label>
-        <input type="text" class="form-control-file" name="city" id="city">
+        <input type="text" required class="form-control-file" name="city" id="city">
 
         <label for="streetAdress">Streeet Adress</label>
-        <input type="text" class="form-control-file" name="streetAdress" id="streetAdress">
+        <input type="text" required class="form-control-file" name="streetAdress" id="streetAdress">
         </div>
         <div class="row">
         <label for="state">State</label>
-        <input type="text" class="form-control-file" name="state" id="state">
+        <input type="text" required class="form-control-file" name="state" id="state">
 
         <label for="age">Age</label>
-        <input type="text" class="form-control-file" name="age" id="age">
+        <input type="text" required  class="form-control-file" name="age" id="age">
         </div>
         <div class="row">
         <label for="postalCode"> Postal code</label>
-        <input type="text" class="form-control-file"  name="postalCode" id="postalCode">
+        <input type="text" required class="form-control-file"  name="postalCode" id="postalCode">
 
         <label for="phoneNumber">Phone Number</label>
-        <input type="text" class="form-control-file" name="phoneNumber" id="phoneNumber">
+        <input type="text" required class="form-control-file" name="phoneNumber" id="phoneNumber">
         </div>
         <div class="buttons">
-        <button type="submit" name="submit" class="btn btn-primary" >Submit</button>
-        <input type="button" class="btn btn-secondary" id="returnToDashboard" onclick="window.location='dashboard.php'" value="Return"></input>
+        <button type="submit" required name="submit" class="btn btn-primary" >Submit</button>
+        <input type="button"  class="btn btn-secondary" id="returnToDashboard" onclick="window.location='dashboard.php'" value="Return"></input>
         </div>
     </form>
 </body>
