@@ -54,13 +54,23 @@ function renderDashboard(data) {
     let tdPhone = document.createElement("td");
     tr.append(tdPhone);
     tdPhone.append(employee.phoneNumber);
-    //BUTTON TO DELETE THE EMPLOYEE
+    //BUTTON TO DELETE and modify THE EMPLOYEE
     let btnTrash = document.createElement("button");
-    btnTrash.classList.add("btn__trash");
+    btnTrash.classList.add('btn__trash', 'btn', 'btn-light');
+ 
     btnTrash.setAttribute('id','btnDelete');
+    btnTrash.textContent="Delete";
     btnTrash.setAttribute('data-id', employee.id);
     btnTrash.addEventListener('click', deleteEmployee);
     tr.append(btnTrash);
+    //button modify
+    let btnModify = document.createElement("button");
+    btnModify.classList.add('btn__Modify','btn', 'btn-warning');
+    btnModify.setAttribute('id','btnModify');
+    btnModify.textContent="Modify";
+    btnModify.setAttribute('data-id', employee.id);
+    btnModify.addEventListener('click', modifyEmployee);
+    tr.append(btnModify);
   });
 }
 function deleteEmployee(e) {
@@ -74,4 +84,16 @@ function deleteEmployee(e) {
 }
 sendReq();
 window.location.reload();
+}
+function modifyEmployee(e) {
+  const userId = e.currentTarget.getAttribute('data-id');
+  
+  const sendReq = async () => {
+    const req = await fetch(`.././src/library/employeeController.php`, {
+        method: 'GET',
+        body: JSON.stringify(+userId)
+    });
+}
+sendReq();
+
 }

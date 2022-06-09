@@ -21,6 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
         $dataId = json_decode($inputdata);
         deleteEmployee($dataId);
 }
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    $inputdata = file_get_contents("php://input");
+        $dataId = json_decode($inputdata);
+        deleteEmployee($dataId);
+}
 //GET THE FORM OF THE EMPLOYEE PAGE
 // require_once "employee.php";
 
